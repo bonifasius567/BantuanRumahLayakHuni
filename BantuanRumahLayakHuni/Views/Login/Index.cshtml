@@ -4,7 +4,49 @@
     Layout = "~/Views/Shared/_LayoutLogin.cshtml";
 }
 
-<div class="container container-tight py-4">
+<div class="container" id="container">
+    <div class="form-container sign-up">
+        <form>
+            <h1>Create Account</h1>
+            <div class="social-icons">
+                <a href="#" class="icons"><i class="fa-brands fa-google-plus-g"></i></a>
+                <a href="#" class="icons"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" class="icons"><i class="fa-brands fa-github"></i></a>
+                <a href="#" class="icons"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+            <span>or use your email to registration</span>
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Sign Up</button>
+        </form>
+    </div>
+    <div class="form-container sign-in">
+        <form action ="javascript:void(0);" onsubmit="submitForm();" id="formLogin" autocomplete="off" novalidate>
+            <h1>Sign In</h1>
+
+            <input type="email" name="email" id="email" placeholder="Your email@mail" autocomplete="off">
+            <input type="password" class="form-control" name="password" id="password" placeholder="Your password" autocomplete="off">
+            
+            <button type="submit">Sign In</button>
+        </form>
+</div>
+    <div class="toggle-container">
+        <div class="toggle">
+            <div class="toggle-panel toggle-left">
+                <h1>Welcome Back!</h1>
+                <p>Enter your Personal details to use all of site features</p>
+                <button class="hidden" id="login">Sign In</button>
+            </div>
+            <div class="toggle-panel toggle-right">
+                <h1>PBRLH</h1>
+                <p>Sistem Pendukung Keputusan Penerimaan Bantuan Rumah Layak Huni Di Desa Oan Mane Menggunakan Metode SAW</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*<div class="container container-tight py-4">
     <div class="text-center mb-4">
         <a href="." class="navbar-brand navbar-brand-autodark">
             <h1 class="h1 text-primary text-center">PBRLH</h1>
@@ -32,7 +74,7 @@
             </form>
         </div>
     </div>
-</div>
+</div>*@
 
 
 @section scripts{
