@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DB_SPK_PBRLH">
+  <DataContextMoniker Name="/DB_SPK_PBRLHDataContext" />
+  <nestedChildShapes>
+    <classShape Id="a150e655-10f1-41ff-b17c-e7ba12bd7a30" absoluteBounds="3, 2.625, 2, 1.7708968098958326">
+      <DataClassMoniker Name="/DB_SPK_PBRLHDataContext/TBL_M_CALON_PENERIMA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="31ff31e9-bba7-4f40-b262-d0d7ab8f95d1" absoluteBounds="3.0149999999999997, 3.085, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="1bc8cfb0-59a4-40a2-b05f-07ba1de192e9" absoluteBounds="0.5, 0.5, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DB_SPK_PBRLHDataContext/TBL_M_KRITERIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="c0e84cad-ab8c-437f-84e7-5e11cbff6df1" absoluteBounds="0.515, 0.96, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="2eced88b-dd44-441c-87a9-1218e4c39612" absoluteBounds="0.5, 2.625, 2, 1.5785953776041666">
+      <DataClassMoniker Name="/DB_SPK_PBRLHDataContext/TBL_M_KRITERIA_DETAIL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="1baf91ba-b701-4102-a00a-d8cb580111bf" absoluteBounds="0.51500000000000012, 3.085, 1.9700000000000002, 1.0185953776041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="6b2540bf-86b5-4d53-b5a3-8f0769c1353c" absoluteBounds="5.5, 2.625, 2, 1.1939925130208344">
+      <DataClassMoniker Name="/DB_SPK_PBRLHDataContext/TBL_T_HASIL" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cd3d3bab-24dd-4874-8a1a-979a1445b696" absoluteBounds="5.5150000000000006, 3.085, 1.9700000000000002, 0.63399251302083326" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(1.5 : 2.07859537760417); (1.5 : 2.625)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_SPK_PBRLHDataContext/TBL_M_KRITERIA/TBL_M_KRITERIA_TBL_M_KRITERIA_DETAIL" />
+      <nodes>
+        <classShapeMoniker Id="1bc8cfb0-59a4-40a2-b05f-07ba1de192e9" />
+        <classShapeMoniker Id="2eced88b-dd44-441c-87a9-1218e4c39612" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 3.22199625651042); (5.5 : 3.22199625651042)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/DB_SPK_PBRLHDataContext/TBL_M_CALON_PENERIMA/TBL_M_CALON_PENERIMA_TBL_T_HASIL" />
+      <nodes>
+        <classShapeMoniker Id="a150e655-10f1-41ff-b17c-e7ba12bd7a30" />
+        <classShapeMoniker Id="6b2540bf-86b5-4d53-b5a3-8f0769c1353c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c051854f-32e2-4bc1-a504-b76f90d9fa0c" absoluteBounds="3, 0.5, 2, 1.3862939453125">
+      <DataClassMoniker Name="/DB_SPK_PBRLHDataContext/TBL_T_KRITERIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e4c21f03-7fd2-4525-a2f6-fdb3d9fd2c44" absoluteBounds="3.0149999999999997, 0.96, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4 : 2.625); (4 : 1.8862939453125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DB_SPK_PBRLHDataContext/TBL_M_CALON_PENERIMA/TBL_M_CALON_PENERIMA_TBL_T_KRITERIA" />
+      <nodes>
+        <classShapeMoniker Id="a150e655-10f1-41ff-b17c-e7ba12bd7a30" />
+        <classShapeMoniker Id="c051854f-32e2-4bc1-a504-b76f90d9fa0c" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(2.5 : 1.19314697265625); (3 : 1.19314697265625)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DB_SPK_PBRLHDataContext/TBL_M_KRITERIA/TBL_M_KRITERIA_TBL_T_KRITERIA" />
+      <nodes>
+        <classShapeMoniker Id="1bc8cfb0-59a4-40a2-b05f-07ba1de192e9" />
+        <classShapeMoniker Id="c051854f-32e2-4bc1-a504-b76f90d9fa0c" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="5df15949-ffa8-4c03-ac81-529eec0f8558" absoluteBounds="8.5, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DB_SPK_PBRLHDataContext/VW_REKOMENDASI_SAW" />
+      <nestedChildShapes>
+        <elementListCompartment Id="e2c8f894-bc76-4bac-866e-a79d581aabe9" absoluteBounds="8.515, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e749a96d-fffc-4958-9570-53c2435ca8a6" absoluteBounds="5.5, 0.5, 2, 1.9631982421875">
+      <DataClassMoniker Name="/DB_SPK_PBRLHDataContext/TBL_T_LOGIN" />
+      <nestedChildShapes>
+        <elementListCompartment Id="9c145851-8363-4b4d-963d-1ee65d841e85" absoluteBounds="5.5150000000000006, 0.96, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="d5690e69-3a52-49f9-a77b-381b4d968a1a" absoluteBounds="8.5, 2.625, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/DB_SPK_PBRLHDataContext/VW_NILAI_KRITERIA" />
+      <nestedChildShapes>
+        <elementListCompartment Id="17738d6f-b740-4529-b59b-cc0697f364d7" absoluteBounds="8.515, 3.085, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>
